@@ -1,8 +1,9 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(50);
+	background(255);
 	rectMode(CENTER);
-	stroke(2);
+	strokeWeight(5);
+	frameRate(5);
 }
 
 var ww=0;
@@ -19,6 +20,7 @@ function draw() {
 	
 	for(let x=xw/2; x<ww; x+=xw){
 		for(let y=yh/2; y<wh; y+=yh){
+			stroke(random(255),random(255),random(255));
 			fill(random(255),random(255),random(255));
 			rect(x,y,(xw*0.9),(yh*0.9));
 		}
