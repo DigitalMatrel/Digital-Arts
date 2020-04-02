@@ -20,8 +20,14 @@ function draw() {
 	
 	for(let x=xw/2; x<ww; x+=xw){
 		for(let y=yh/2; y<wh; y+=yh){
+			if(winMouseX>(x-(xw/2)) && winMouseX<(x+(xw/2)) && winMouseY>(y-(yh/2)) && winMouseY<(y+(yh/2))) {
+				stroke(255);
+				fill(255);
+			}
+			else {
 			stroke(random(255),random(255),random(255));
 			fill(random(255),random(255),random(255));
+			}
 			rect(x,y,(xw*0.9),(yh*0.9));
 		}
 	}
